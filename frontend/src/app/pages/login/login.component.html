@@ -1,0 +1,31 @@
+<section class="principal">
+  <main>
+    <img src="img-shopping.png" alt="imagem-login" width="50%" />
+
+    <div class="login">
+      <div class="form" [formGroup]="loginForm">
+        <h3>Bem-vindo(a) à InovaStore!</h3>
+
+        <p>
+          Receba recomendações personalizadas de produtos. Faça login para
+          descobrir novidades que você vai adorar!
+        </p>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input type="text" matInput formControlName="email" />
+          <mat-hint> Ex: mail&#64;email.com </mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Senha</mat-label>
+          <input type="password" matInput formControlName="password"/>
+          <mat-hint style="color: rgb(255, 57, 57);">{{ message }}</mat-hint>
+        </mat-form-field>
+
+        <button mat-flat-button (click)="login()" [disabled]="loginForm.invalid">Entrar</button>
+      </div>
+      <p>Ainda não possui conta? <a routerLink="register">Clique aqui</a></p>
+    </div>
+  </main>
+</section>

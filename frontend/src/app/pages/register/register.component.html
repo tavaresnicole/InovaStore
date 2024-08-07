@@ -1,0 +1,45 @@
+<section class="cadastro">
+  <form [formGroup]="registerForm">
+    <h3>Realize o cadastro para aproveitar a InovaStore</h3>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Informe seu nome completo</mat-label>
+      <input formControlName="name" matInput type="text" />
+
+      @if (registerForm.get('name')?.touched &&
+      registerForm.get('name')?.hasError('minlength')) {
+      <mat-hint style="color: rgb(255, 57, 57)">
+        *Nome deve conter no mínimo 3 caracteres
+      </mat-hint>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Insira o seu email</mat-label>
+      <input formControlName="email" type="text" matInput />
+
+      @if (registerForm.get('email')?.touched &&
+      registerForm.get('email')?.hasError('email')) {
+      <mat-hint style="color: rgb(255, 57, 57)">
+        *Este campo é obrigatório
+      </mat-hint>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Crie uma senha forte</mat-label>
+      <input formControlName="password" type="password" matInput />
+
+      @if (registerForm.get('password')?.touched &&
+      registerForm.get('password')?.hasError('minlength')) {
+      <mat-hint style="color: rgb(255, 57, 57)">
+        *Senha deve conter no mínimo 7 caracteres
+      </mat-hint>
+      }
+    </mat-form-field>
+
+    <button mat-flat-button (click)="register()" [disabled]="registerForm.invalid">
+      Cadastrar
+    </button>
+  </form>
+</section>

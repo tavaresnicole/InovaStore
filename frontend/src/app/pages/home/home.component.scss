@@ -1,0 +1,23 @@
+mat-toolbar{
+    background-color: #a00098;
+    font-size: 1.2rem;
+
+    span{
+        margin-left: 10px;
+    }
+
+    mat-icon{
+        cursor: pointer;
+    }
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3{
+        color: #3f3d56;
+        text-align: center;
+    }
+}
