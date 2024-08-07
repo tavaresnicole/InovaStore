@@ -31,7 +31,8 @@ Este projeto tem como objetivo demonstrar um sistema básico de autenticação, 
 
 - **Angular** (v18)
 - **TypeScript**
-- **CSS**
+- **SCSS**
+- **Angular Material**
 
 ## Funcionalidades
 
@@ -54,4 +55,49 @@ Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
 Clone este repositório:
 
 ```bash
-git clone https://github.com/tavaresnicole/InovaStore
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+````
+
+**Backend** 
+
+acesse a pasta:
+
+```bash
+cd backend
+```
+
+instale as dependências:
+
+```bash
+npm install
+```
+
+inicie o servidor:
+
+```bash
+npm run dev
+```
+
+---
+
+**Frontend** 
+
+acesse a pasta:
+
+```bash
+cd frontend
+```
+
+instale as dependências:
+
+```bash
+npm install
+```
+
+inicie o servidor:
+
+```bash
+ng serve
+```
+
+
