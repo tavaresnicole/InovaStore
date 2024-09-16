@@ -1,0 +1,18 @@
+<h2>Minhas compras</h2>
+
+<mat-list>
+    @for (item of cartService.cart(); track $index) {
+        <mat-list-item>
+            <img matListItemAvatar [src]="item.image"/>
+            <span matListItemTitle>{{item.description}}</span>
+            <span matListItemLine>{{item.value | currency: "BRL"}}</span>
+        </mat-list-item>
+        <mat-divider/>
+    } @empty {
+        <mat-list-item>
+            Ainda não há nada para ver aqui.
+        </mat-list-item>
+    }
+</mat-list>
+
+<span class="total">Total: {{total() | currency: "BRL"}}</span>

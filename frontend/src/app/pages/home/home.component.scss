@@ -1,23 +1,88 @@
-mat-toolbar{
-    background-color: #a00098;
-    font-size: 1.2rem;
+.main-text{
+    display: flex;
+    justify-content: center;
 
-    span{
-        margin-left: 10px;
-    }
-
-    mat-icon{
-        cursor: pointer;
+    p {
+        font-size: 2.5rem;
     }
 }
 
-div{
+.images {
+    display: flex;
+    justify-content: center;
+    column-gap: 80px;
+
+    img {
+        border-radius: 8px;
+    }
+
+    .actions {
+        position: relative;
+
+        .title-route {
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            color: white;
+        }
+
+        .title-route span {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+          }
+    }
+}
+
+.about {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
 
-    h3{
-        color: #3f3d56;
+    p {
+        width: 80%;
+    }
+}
+
+@media  (max-width: 800px) {
+    .main-text{
+    
+        p {
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 5px;
+        }
+    }
+
+    .images{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        .actions {
+            display: flex;
+            justify-content: center;
+
+            .title-route {
+                bottom: 20px;
+                left: 60px;
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+            }
+
+            img{
+                width: 80%;
+            }
+        }
+    }
+
+    .about {
+        h1 {
+            font-size: 1.5rem;
+        }
         text-align: center;
     }
 }

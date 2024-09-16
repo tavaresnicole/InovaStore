@@ -1,6 +1,50 @@
-*{
-    margin: 0;
+@use '@angular/material' as mat;
+@use './m3-theme.scss' as theme;
+
+@import '@angular/cdk/overlay-prebuilt.css';
+
+$theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$azure-palette,
+    tertiary: mat.$red-palette
+  ),
+  typography: (
+    brand-family: 'Poppins',
+    plain-family: 'Poppins',
+    bold-weight: 900
+  ),
+  density: (
+    scale: -1
+  )
+));
+
+html{
+    @include mat.core-theme(theme.$light-theme);
+    @include mat.all-component-themes(theme.$light-theme);
 }
 
-html, body { height: 100%; }
-body { font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background-color: #f3f3f3;
+}
+
+mat-card{
+    --mat-card-subtitle-text-size: 0.8rem;
+    --mat-card-subtitle-text-color: gray;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dcdcdc;
+  border-radius: 6px;
+}

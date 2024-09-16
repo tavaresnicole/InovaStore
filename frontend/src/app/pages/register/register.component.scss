@@ -3,10 +3,9 @@ form{
     flex-direction: column;
     justify-content: center;
     width: 50vw;
-    background-color: #a00098;
+    background-color: #d0d1d7;
     padding: 80px;
     border-radius: 20px;
-    color: #fff;
 }
 
 h2{
@@ -20,20 +19,11 @@ span{
 input, button{
     border: none;
     border-radius: 5px;
-    
-}
-
-button{
-    --mdc-filled-button-container-color: #2f2e43;
-    --mdc-filled-button-label-text-color: #fff;
-}
-
-button:hover{
-    background-color: #272637;
 }
 
 button:disabled{
-    background-color: #ababad;
+    background-color: #494949;
+    color: #b7b7b9;
     cursor: not-allowed;
 }
 

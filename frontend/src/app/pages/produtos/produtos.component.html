@@ -1,0 +1,26 @@
+<section class="cards">
+    @for (product of filteredProducts; track $index) {
+        <mat-card class="card">
+          <mat-card-header>
+            <mat-card-title>{{product.item}}</mat-card-title>
+            <mat-card-subtitle>{{product.description}}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image class="image" [src]="product.image" alt="" />
+          <mat-card-content>
+            <p>
+              {{product.value | currency: "BRL"}}
+            </p>
+          </mat-card-content>
+          <mat-card-actions align="end">
+            <button mat-button>
+              <mat-icon fontIcon="favorite" />
+              Favoritar
+            </button>
+            <button mat-flat-button (click)="addToCart(product)">
+              <mat-icon fontIcon="shopping_cart"/>
+              Comprar
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      }
+</section>

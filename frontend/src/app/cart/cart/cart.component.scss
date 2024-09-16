@@ -1,0 +1,38 @@
+:host {
+    width: 350px;
+    background-color: white;
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 12px;
+    padding: 10px;
+    margin: 30px;
+}
+
+mat-list {
+    h2 {
+        margin: 0;
+    }
+
+    button {
+        margin: auto;
+    }
+
+    .mat-divider {
+        border-top-color: #e3e3e3;
+    }
+}
+
+.total{
+    margin-top: 50px;
+    color: rgb(81, 81, 81);
+    font-size: 0.8rem;
+}
+
+@media  (max-width: 800px) {
+    :host {
+        width: 90%;
+        position: fixed;
+        right: 10px;
+        left: 10px;
+        margin: 0;
+    }
+}

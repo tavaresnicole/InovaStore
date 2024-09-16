@@ -1,14 +1,17 @@
-main{
+main {
     display: flex;
     margin: 50px;
     background-color: #fff;
     border-radius: 20px;
     justify-content: space-between;
 
-    .login{
-        background-color: #a00098;
+    img {
+        border-radius: 20px 0px 0px 20px;
+   }
+
+    .login {
+        background-color: #d0d1d7;
         width: 40%;
-        color: #fff;
         padding: 20px;
         border-radius: 0px 20px 20px 0px;
         display: flex;
@@ -17,7 +20,7 @@ main{
         padding: 20px;
         align-items: center;
 
-        .form{
+        .form {
             display: flex;
             flex-direction: column;
 
@@ -27,27 +30,26 @@ main{
             }
 
             button{
-                --mdc-filled-button-container-color: #2f2e43;
                 --mdc-filled-button-container-shape: 5px;
-                --mdc-filled-button-label-text-color: #ffff;
+            }
+            
+            button:disabled{
+                background-color: #494949;
+                color: #b7b7b9;
+                cursor: not-allowed;
             }
 
-            button:disabled{
-                background-color: #ababad;
-                cursor: not-allowed;
+            mat-label{
+                color: #303030;
             }
         }
         
         p{
             margin-top: 15px;
             a{
-                color: #95caff;
+                color: #006cd8;
             }
         } 
-    }
-
-    img{
-        padding: 20px;
     }
 }
 

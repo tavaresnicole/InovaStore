@@ -1,14 +1,41 @@
-<mat-toolbar>
-  <mat-icon
-    aria-hidden="false"
-    aria-label="Example home icon"
-    fontIcon="home"
-  ></mat-icon>
-  <span>InovaStore</span>
-</mat-toolbar>
+<img src="banner-01.jpeg" alt="" width="100%" />
 
-<div>
-  <img src="welcome-img.png" alt="Welcome image" width="50%">
-  <h3>Bem-vindo(a) {{ user }}!</h3>
+<div class="main-text">
+  <p>DESCUBRA AS TENDÊNCIAS DO MOMENTO</p>
 </div>
 
+<div class="images">
+  <div class="actions">
+    <img src="modelo-feminina.jpeg" alt="FEMININO" width="100%" />
+    <div class="title-route">
+      <h1 (click)="showAbout()">FEMININO</h1>
+      <span [routerLink]="['produtos','f']">COMPRAR<mat-icon fontIcon="arrow_forward_ios" /></span>
+    </div>
+  </div>
+
+  <div class="actions">
+    <img src="modelo-masculino.jpeg" alt="MASCULINO" width="100%" />
+    <div class="title-route">
+      <h1>MASCULINO</h1>
+      <span [routerLink]="['produtos','m']">COMPRAR<mat-icon fontIcon="arrow_forward_ios" /></span>
+    </div>
+  </div>
+</div>
+
+<div #about class="about">
+  <h1>SOBRE A INOVASTORE</h1>
+  <p>
+    A InovaStore é mais que uma loja online; é uma marca que acredita em
+    oferecer qualidade, confiança e uma experiência única para seus clientes.
+    <br />
+    Sabemos que a confiança é fundamental no mundo digital, por isso,
+    trabalhamos com total transparência, desde a navegação até a entrega. Nossa
+    equipe é dedicada a oferecer um atendimento ao cliente excepcional,
+    disponível para auxiliar em todas as etapas da compra, com a segurança de um
+    sistema de pagamento confiável e políticas claras de devolução e troca.
+    <br />
+    Com a InovaStore, você pode ter certeza de que está adquirindo produtos de
+    alta qualidade, com um atendimento que prioriza suas necessidades, sempre
+    buscando superar expectativas.
+  </p>
+</div>

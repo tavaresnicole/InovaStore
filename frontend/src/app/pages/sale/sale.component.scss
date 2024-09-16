@@ -1,0 +1,23 @@
+.card {
+    width: 280px;
+    margin: 30px; 
+}
+
+.cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+mat-card-subtitle{
+    margin-bottom: 8px;
+}
+
+s{
+    color: gray;
+    font-size: 0.9rem;
+}
+
+.spacer{
+    flex: 1;
+}

@@ -1,0 +1,76 @@
+<mat-drawer-container hasBackdrop="true" autosize class="container">
+  <mat-drawer #drawer mode="over" position="end" class="option-sidenav">
+    <mat-nav-list role="list">
+      <div mat-subheader>Olá {{ user }}!</div>
+
+      <div>
+        <mat-list-item routerLink="sale">Sale 20%</mat-list-item>
+        <mat-list-item routerLink="produtos">Produtos</mat-list-item>
+        <mat-list-item routerLink="/main" [queryParams]="{showAbout: true}">Sobre nós</mat-list-item>
+      </div>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <mat-toolbar>
+    <span routerLink="/main">InovaStore</span>
+
+    <div class="navigation">
+      <div class="options">
+        <button mat-flat-button routerLink="sale">Sale 20%</button>
+        <button mat-button routerLink="produtos">Produtos</button>
+        <button mat-button routerLink="/main" [queryParams]="{showAbout: true}">Sobre nós</button>
+      </div>
+      
+      <div>
+        <button mat-icon-button [matBadge]="cartService.cart().length" (click)="isOpen = !isOpen" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+          <mat-icon fontIcon="shopping_cart" />
+        </button>
+       
+        <button mat-icon-button class="icon-mat-drawer">
+          <mat-icon (click)="drawer.toggle()" fontIcon="menu" />
+        </button>
+      </div>
+
+      <small class="welcome">Olá {{ user }}!</small>
+    </div>
+  </mat-toolbar>
+
+  <router-outlet />
+
+  <footer>
+    <div class="contact-footer">
+      <h4>Informações de contato</h4>
+      <small>
+        <mat-icon fontIcon="home"/>
+        Av. Teodoro Capitani 123, Tijuca - Rio de Janeiro
+      </small>
+
+      <small>
+        <mat-icon fontIcon="call"/>
+        (11)1234-5678
+      </small>
+
+      <small>
+        <mat-icon fontIcon="mail"/>
+        sac.inova.com.br
+      </small>
+    </div>
+
+    <div class="about-footer">
+      <h4>Ajuda</h4>
+      <small>Entrega</small>
+      <small>Devolução</small>
+      <small>Pagamento</small>
+      <small>Central de atendimento</small>
+   </div>
+  </footer>
+</mat-drawer-container>
+
+
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="trigger"
+  [cdkConnectedOverlayOpen]="isOpen"
+>
+  <app-cart/>
+</ng-template>

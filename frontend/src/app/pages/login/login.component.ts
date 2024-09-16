@@ -33,7 +33,7 @@ export class LoginComponent {
     this.securityService.login(this.loginForm.value.email!, this.loginForm.value.password!).subscribe({
       next: (res: {message: string, user: string}) => {
         sessionStorage.setItem("user", res.user);
-        this.router.navigateByUrl('home');
+        this.router.navigateByUrl('main');
       },
       error: (res: {message: string}) => {
         this.message = "Não foi possivel efetuar o login";
